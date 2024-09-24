@@ -1,0 +1,74 @@
+\RequirePackage{xspace}
+
+% ---------------------------------------------------------
+
+\newcommand{\dom}[1]{%
+    \mathrm{dom} (#1)%
+}
+
+% ---------------------------------------------------------
+
+\makeatletter
+\newcommand{\OCaml}{%
+    \textsc{OCaml}\xspace%
+}
+\newcommand{\Coq}{%
+    \textsc{Coq}\xspace%
+}
+\newcommand{\Iris}{%
+    \href{https://iris-project.org/}{\textsc{Iris}}\xspace%
+}
+\newcommand{\Zoo}[1][\@nil]{%
+    \href{https://github.com/clef-men/zoo}{\textsc{Zoo}}\def\@tmp{#1}\ifx\@tmp\@nnil \xspace \else \fi%
+}
+\makeatother
+
+% ---------------------------------------------------------
+
+\newcommand{\Prop}{%
+    \mathrm{Prop}%
+}
+
+\newcommand{\iProp}{%
+    \mathrm{iProp}%
+}
+\newcommand{\iSep}{%
+    \ast%
+}
+\newcommand{\iBigSep}{%
+    \scalerel*{\iSep}{\sum}%
+}
+\newcommand{\iWand}{%
+    \mathrel{-\mkern-6mu\iSep}%
+}
+\newcommand{\iBupd}{%
+    |\!\!\!\Rrightarrow%
+}
+\newcommand{\iPersistent}{%
+    \square%
+}
+\newcommand{\iTrue}{%
+    \mathrm{True}%
+}
+\newcommand{\iFalse}{%
+    \mathrm{False}%
+}
+\newcommand{\iPointsto}{%
+    \mapsto%
+}
+\newcommand{\iPred}{%
+    \Phi%
+}
+\newcommand{\iPredTwo}{%
+    \Psi%
+}
+
+\newcommand{\iSpec}[4]{%
+	\begin{array}{c}
+			\left\lbrace\, #1 \,\right\rbrace
+		\\ \hline
+			#2
+		\\ \hline
+			\left\lbrace\, #3 \ldotp #4 \,\right\rbrace
+	\end{array}
+}
